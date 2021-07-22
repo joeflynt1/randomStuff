@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Tournament</title>
+        <style>
+
+        </style>
+        <script type="text/javascript">
+
+                function submitInformation() {
+                        var numOfPlayers=document.getElementById("text1").value;
+                        alert("player count:" +  numOfPlayers);
+                        var usernames=document.getElementById("text2").value;
+                        alert("usernames:" +  usernames);
+                        var nameArr = usernames.split(',');
+                        alert(nameArr[0] +"\n"+ nameArr[1] +"\n"+ nameArr[2] +"\n"  )
+                }
+            
+
+
+        </script>
+</head>
+<body>
+
+
+        <form method="post">
+                <h1>Please fill in the questions below.</h1><br>
+                Please select one of the following tournament types <br>
+                <input type="radio" id="roundRobin" name="tournamentType" value="roundRobin">
+                <label for="roundRobin">Round robin</label><br>
+                <input type="radio" id="singleElimination" name="tournamentType" value="singleElimination">
+                <label for="singleElimination">Single elimination</label><br>
+
+
+                Enter the number of players below. Must be 2,4,8,16, or 32. <br>
+                <input type="text" size= "2" id= "text1" ><br>
+                Please insert usernames in a comma seperated list below <br>
+                <textarea type="text" id="text2"  name="name" placeholder="ex:cake,muffin,chocolate" cols="50" rows="10" value=""></textarea>
+                <input type="submit" name="submit" value="Submit" onclick="submitInformation()">
+
+        </form>
+
+</body>
+</html>
